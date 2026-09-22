@@ -225,8 +225,8 @@ export default function LectureCard({
                                         size={22}
                                     />
                                 }
-                                title="SQL Scripts"
-                                subtitle="SQL Files"
+                                title="Scripts"
+                                subtitle="Code Files"
                                 available={lecture.resources.code.uploaded}
                                 buttonText="Open"
                             />
