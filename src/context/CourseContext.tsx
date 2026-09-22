@@ -1,23 +1,9 @@
-import {
-    createContext,
-    type Dispatch,
-    type SetStateAction
-} from "react";
+import { createContext } from "react";
 
-import { dbmsCourse } from "../data/teaching/dbms";
+import type { CourseBundle } from "../types/teaching";
 
-export type CourseContextType = {
+import { courseRegistry } from "../data/teaching/courseRegistry";
 
-    course: typeof dbmsCourse;
-
-    setCourse: Dispatch<SetStateAction<typeof dbmsCourse>>;
-
-};
-
-export const CourseContext = createContext<CourseContextType>({
-
-    course: dbmsCourse,
-
-    setCourse: () => {}
-
-});
+export const CourseContext = createContext<CourseBundle>(
+    courseRegistry.dbms
+);

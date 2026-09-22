@@ -1,8 +1,8 @@
 import type { CourseProgress } from "../../../types/teaching";
 
-export const dbmsProgress: CourseProgress = {
+export const mcppProgress: CourseProgress = {
 
-    completedTheoryHours: 3,
+    completedTheoryHours: 0,
 
     theoryHours: 40,
 
@@ -10,7 +10,7 @@ export const dbmsProgress: CourseProgress = {
 
     labHours: 24,
 
-    completedClasses: 2,
+    completedClasses: 0,
 
     totalClasses: 20,
 

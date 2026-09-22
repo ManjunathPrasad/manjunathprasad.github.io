@@ -1,13 +1,15 @@
-import {
-    useState,
-    type ReactNode
-} from "react";
+import type { ReactNode } from "react";
 
-import { dbmsCourse } from "../data/teaching/dbms";
+import {
+    courseRegistry,
+    type CourseId
+} from "../data/teaching/courseRegistry";
 
 import { CourseContext } from "./CourseContext";
 
 type Props = {
+
+    courseId: CourseId;
 
     children: ReactNode;
 
@@ -15,20 +17,15 @@ type Props = {
 
 export function CourseProvider({
 
+    courseId,
+
     children
 
 }: Props) {
 
-    const [course, setCourse] = useState(dbmsCourse);
-
     return (
 
-        <CourseContext.Provider
-            value={{
-                course,
-                setCourse
-            }}
-        >
+        <CourseContext.Provider value={courseRegistry[courseId]}>
 
             {children}
 

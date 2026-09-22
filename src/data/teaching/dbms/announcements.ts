@@ -1,27 +1,4 @@
-export interface Announcement {
-
-    id: number;
-
-    title: string;
-
-    description: string;
-
-    date: string;
-
-    type:
-        | "General"
-        | "Assignment"
-        | "Laboratory"
-        | "Exam"
-        | "Holiday";
-
-    pinned: boolean;
-
-    isNew: boolean;
-
-    attachment?: string;
-
-}
+import type { Announcement } from "../../../types/teaching";
 
 export const dbmsAnnouncements: Announcement[] = [
 

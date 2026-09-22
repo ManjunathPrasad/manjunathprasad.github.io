@@ -1,45 +1,4 @@
-export type JournalStatus =
-    | "Completed"
-    | "Current"
-    | "Upcoming";
-
-type Resource = {
-
-    uploaded: boolean;
-
-    file: string;
-
-};
-
-export interface JournalLecture {
-
-    id: number;
-
-    classNo: number;
-
-    unit: string;
-
-    date: string;
-
-    title: string;
-
-    topics: string[];
-
-    resources: {
-
-        notes: Resource;
-
-        slides: Resource;
-
-        code: Resource;
-
-        reading: Resource;
-
-    };
-
-    status: JournalStatus;
-
-}
+import type { JournalLecture } from "../../../types/teaching";
 
 export const dbmsJournal: JournalLecture[] = [
 

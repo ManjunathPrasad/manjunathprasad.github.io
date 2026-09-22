@@ -8,7 +8,28 @@ import {
 import HeroButton from "../CourseLayout/HeroButton";
 import HeroStatsCard from "../CourseLayout/HeroStatsCard";
 
+import { currentSemesterCourses } from "../../../data/teaching/currentSemesterCourses";
+
 export default function TeachingHero() {
+
+    const activeCourses = currentSemesterCourses.filter(
+        (course) => course.status === "Active"
+    );
+
+    const totalStudents = activeCourses.reduce(
+        (sum, course) => sum + course.students,
+        0
+    );
+
+    const totalTheoryHours = activeCourses.reduce(
+        (sum, course) => sum + course.theoryHours,
+        0
+    );
+
+    const totalLabHours = activeCourses.reduce(
+        (sum, course) => sum + course.labHours,
+        0
+    );
 
     return (
 
@@ -138,25 +159,25 @@ export default function TeachingHero() {
 
                     <HeroStatsCard
                         icon={BookOpen}
-                        value="1"
+                        value={String(activeCourses.length)}
                         label="Course"
                     />
 
                     <HeroStatsCard
                         icon={Users}
-                        value="2"
+                        value={String(totalStudents)}
                         label="Students"
                     />
 
                     <HeroStatsCard
                         icon={GraduationCap}
-                        value="40"
+                        value={String(totalTheoryHours)}
                         label="Theory Hours"
                     />
 
                     <HeroStatsCard
                         icon={FlaskConical}
-                        value="24"
+                        value={String(totalLabHours)}
                         label="Laboratory Hours"
                     />
 

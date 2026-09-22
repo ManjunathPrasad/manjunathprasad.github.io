@@ -5,11 +5,13 @@ import InfoCard from "../../ui/InfoCard";
 
 import SectionHeader from "./SectionHeader";
 
-import { dbmsSyllabus } from "../../../data/teaching/dbms";
+import { useCourse } from "../../../context/useCourse";
 
 export default function CourseSyllabus() {
 
-    const items: AccordionItem[] = dbmsSyllabus.map((unit) => ({
+    const { syllabus } = useCourse();
+
+    const items: AccordionItem[] = syllabus.map((unit) => ({
 
         id: unit.id.toString(),
 

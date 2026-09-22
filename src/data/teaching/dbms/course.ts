@@ -1,4 +1,6 @@
-export const dbmsCourse = {
+import type { CourseInfo } from "../../../types/teaching";
+
+export const dbmsCourse: CourseInfo = {
     code: "23AIPC302",
     title: "Database Management Systems",
     semester: "V Semester",
@@ -10,6 +12,9 @@ export const dbmsCourse = {
     labHours: 12,
 
     instructor: "Manjunath Prasad H. R.",
+
+    startedOn: "22 June 2026",
+    currentModule: "Introduction to Database Systems",
 
     description:
         "Database Management Systems introduces students to database design, relational modelling, SQL, normalization, transaction management and practical database application development.",

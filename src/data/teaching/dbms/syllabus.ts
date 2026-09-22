@@ -1,20 +1,4 @@
-export interface SyllabusUnit {
-
-    id: number;
-
-    title: string;
-
-    description: string;
-
-    hours: number;
-
-    lectures: number;
-
-    outcomes: string[];
-
-    topics: string[];
-
-}
+import type { SyllabusUnit } from "../../../types/teaching";
 
 export const dbmsSyllabus: SyllabusUnit[] = [
 

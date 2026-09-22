@@ -5,7 +5,7 @@ import {
     Bell
 } from "lucide-react";
 
-import { dbmsCourse } from "../../../data/teaching/dbms";
+import { useCourse } from "../../../context/useCourse";
 
 import {
     getCompletedTheoryHours,
@@ -24,11 +24,20 @@ import StatCard from "../../ui/StatCard";
 
 export default function CourseDashboard() {
 
-    const theoryHours = getCompletedTheoryHours();
-    const labHours = getCompletedLabHours();
+    const {
+        course,
+        journal,
+        labs,
+        resources,
+        assignments,
+        announcements
+    } = useCourse();
 
-    const theoryPercentage = getTheoryProgressPercentage();
-    const labPercentage = getLabProgressPercentage();
+    const theoryHours = getCompletedTheoryHours(journal);
+    const labHours = getCompletedLabHours(labs);
+
+    const theoryPercentage = getTheoryProgressPercentage(journal, course);
+    const labPercentage = getLabProgressPercentage(labs, course);
 
     return (
 
@@ -56,7 +65,7 @@ export default function CourseDashboard() {
                         icon={<BookOpen className="text-blue-600" />}
                         title="Theory Progress"
                         completed={theoryHours}
-                        total={dbmsCourse.lectureHours}
+                        total={course.lectureHours}
                         percentage={theoryPercentage}
                         color="bg-blue-600"
                     />
@@ -65,7 +74,7 @@ export default function CourseDashboard() {
                         icon={<FlaskConical className="text-purple-600" />}
                         title="Laboratory Progress"
                         completed={labHours}
-                        total={dbmsCourse.labHours}
+                        total={course.labHours}
                         percentage={labPercentage}
                         color="bg-purple-600"
                     />
@@ -77,19 +86,19 @@ export default function CourseDashboard() {
                     <StatCard
                         icon={<FileText className="text-green-600" />}
                         title="Resources Uploaded"
-                        value={getUploadedResourcesCount()}
+                        value={getUploadedResourcesCount(resources)}
                     />
 
                     <StatCard
                         icon={<BookOpen className="text-orange-600" />}
                         title="Assignments Released"
-                        value={getReleasedAssignmentsCount()}
+                        value={getReleasedAssignmentsCount(assignments)}
                     />
 
                     <StatCard
                         icon={<Bell className="text-red-500" />}
                         title="Announcements"
-                        value={getAnnouncementsCount()}
+                        value={getAnnouncementsCount(announcements)}
                     />
 
                 </div>

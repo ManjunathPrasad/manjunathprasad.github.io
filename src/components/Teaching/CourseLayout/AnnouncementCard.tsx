@@ -7,7 +7,7 @@ import {
 
 import Card from "../../ui/Card";
 
-import type { Announcement } from "../../../data/teaching/dbms/announcements";
+import type { Announcement } from "../../../types/teaching";
 
 type Props = {
 

@@ -7,6 +7,8 @@ type Props = {
         lectureHours: number;
         labHours: number;
         instructor: string;
+        startedOn: string;
+        currentModule: string;
     };
 };
 
@@ -65,7 +67,7 @@ export default function CourseHero({ course }: Props) {
                         <div className="mt-6 space-y-3">
 
                             <p>
-                                <strong>Started:</strong> 22 June 2026
+                                <strong>Started:</strong> {course.startedOn}
                             </p>
 
                             <p>
@@ -73,7 +75,7 @@ export default function CourseHero({ course }: Props) {
                             </p>
 
                             <p>
-                                <strong>Current Module:</strong> Introduction to Database Systems
+                                <strong>Current Module:</strong> {course.currentModule}
                             </p>
 
                         </div>

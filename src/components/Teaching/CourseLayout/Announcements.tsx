@@ -4,7 +4,7 @@ import { Search } from "lucide-react";
 import SectionHeader from "./SectionHeader";
 import AnnouncementCard from "./AnnouncementCard";
 
-import { dbmsAnnouncements } from "../../../data/teaching/dbms";
+import { useCourse } from "../../../context/useCourse";
 
 const filters = [
 
@@ -26,13 +26,15 @@ type Filter = typeof filters[number];
 
 export default function Announcements() {
 
+    const { announcements: courseAnnouncements } = useCourse();
+
     const [search, setSearch] = useState("");
 
     const [filter, setFilter] = useState<Filter>("All");
 
     const announcements = useMemo(() => {
 
-        return [...dbmsAnnouncements]
+        return [...courseAnnouncements]
 
             .sort((a, b) => Number(b.pinned) - Number(a.pinned))
 
@@ -62,7 +64,7 @@ export default function Announcements() {
 
             });
 
-    }, [search, filter]);
+    }, [search, filter, courseAnnouncements]);
 
     return (
 

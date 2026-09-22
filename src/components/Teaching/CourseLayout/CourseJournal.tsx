@@ -1,12 +1,14 @@
 import { useMemo, useState } from "react";
 import { Search } from "lucide-react";
 
-import { dbmsJournal } from "../../../data/teaching/dbms";
+import { useCourse } from "../../../context/useCourse";
 
 import SectionHeader from "./SectionHeader";
 import LectureCard from "./LectureCard";
 
 export default function CourseJournal() {
+
+    const { journal } = useCourse();
 
     const [expandedLecture, setExpandedLecture] = useState(1);
 
@@ -20,11 +22,11 @@ export default function CourseJournal() {
 
     if (!query) {
 
-        return dbmsJournal;
+        return journal;
 
     }
 
-    return dbmsJournal.filter((lecture) => {
+    return journal.filter((lecture) => {
 
         const titleMatch =
             lecture.title.toLowerCase().includes(query);
@@ -53,7 +55,7 @@ export default function CourseJournal() {
 
     });
 
-}, [searchText]);
+}, [searchText, journal]);
 
     return (
 
@@ -134,7 +136,7 @@ export default function CourseJournal() {
 
                         <span className="mx-1 font-semibold text-slate-900">
 
-                            {dbmsJournal.length}
+                            {journal.length}
 
                         </span>
 

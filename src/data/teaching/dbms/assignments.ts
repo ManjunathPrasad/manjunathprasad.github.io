@@ -1,14 +1,4 @@
-export interface Assignment {
-
-    id: number;
-
-    title: string;
-
-    dueDate: string;
-
-    status: "Released" | "Upcoming" | "Closed";
-
-}
+import type { Assignment } from "../../../types/teaching";
 
 export const dbmsAssignments: Assignment[] = [
 

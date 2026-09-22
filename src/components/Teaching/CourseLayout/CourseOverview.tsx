@@ -1,14 +1,10 @@
+import { useCourse } from "../../../context/useCourse";
+
 import SectionHeader from "./SectionHeader";
 
 export default function CourseOverview() {
 
-    const objectives = [
-        "Understand the fundamentals of database systems.",
-        "Design databases using Entity Relationship modelling.",
-        "Apply relational algebra and relational database concepts.",
-        "Develop SQL queries for data definition and manipulation.",
-        "Understand normalization and transaction management."
-    ];
+    const { course } = useCourse();
 
     return (
 
@@ -26,12 +22,12 @@ export default function CourseOverview() {
             <SectionHeader
                 eyebrow="Course Introduction"
                 title="Course Overview"
-                description="Database Management Systems introduces students to database design, relational modelling, SQL, normalization, transaction management and practical database application development."
+                description={course.description}
             />
 
             <div className="mt-12 grid gap-6 md:grid-cols-2">
 
-                {objectives.map((objective) => (
+                {course.objectives.map((objective) => (
 
                     <div
                         key={objective}

@@ -9,9 +9,11 @@ import {
 import FileCard from "../../ui/FileCard";
 import SectionHeader from "./SectionHeader";
 
-import { dbmsLabs } from "../../../data/teaching/dbms";
+import { useCourse } from "../../../context/useCourse";
 
 export default function LaboratoryStudio() {
+
+    const { labs } = useCourse();
 
     return (
 
@@ -35,7 +37,7 @@ export default function LaboratoryStudio() {
 
                 <div className="mt-12 grid gap-8">
 
-                    {dbmsLabs.map((lab) => (
+                    {labs.map((lab) => (
 
                         <div
                             key={lab.id}
@@ -140,9 +142,9 @@ export default function LaboratoryStudio() {
                                             className="text-purple-600"
                                         />
                                     }
-                                    title="SQL Script"
-                                    subtitle="SQL File"
-                                    available={lab.resources.sql.uploaded}
+                                    title="Code File"
+                                    subtitle="Program File"
+                                    available={lab.resources.code.uploaded}
                                     buttonText="Open"
                                 />
 

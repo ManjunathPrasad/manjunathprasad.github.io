@@ -13,7 +13,7 @@ import FileCard from "../../ui/FileCard";
 import StatusBadge from "../../ui/StatusBadge";
 import HighlightText from "../../ui/HighlightText";
 
-import type { JournalLecture } from "../../../data/teaching/dbms/journal";
+import type { JournalLecture } from "../../../types/teaching";
 
 type Props = {
 

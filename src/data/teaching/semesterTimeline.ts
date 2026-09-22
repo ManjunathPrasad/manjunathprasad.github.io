@@ -11,40 +11,40 @@ export const semesterTimeline = [
     {
         id: 2,
         date: "22 Jun",
-        title: "Unit 1",
-        description: "Introduction to Database Systems",
-        completed: true
+        title: "Module 1",
+        description: "Modern Computing Approaches",
+        completed: false
     },
 
     {
         id: 3,
         date: "01 Jul",
-        title: "Unit 2",
-        description: "Data Models",
+        title: "Module 2",
+        description: "Python Fundamentals",
         completed: false
     },
 
     {
         id: 4,
         date: "08 Jul",
-        title: "Unit 3",
-        description: "Normalization",
+        title: "Module 3",
+        description: "Strings, Flow Control, and Functions",
         completed: false
     },
 
     {
         id: 5,
         date: "16 Jul",
-        title: "Unit 4",
-        description: "Query Processing",
+        title: "Module 4",
+        description: "Built-in Data Structures and Files",
         completed: false
     },
 
     {
         id: 6,
         date: "23 Jul",
-        title: "Unit 5",
-        description: "Transaction Processing & Recovery",
+        title: "Module 5",
+        description: "Artificial Intelligence and Machine Learning",
         completed: false
     },
 

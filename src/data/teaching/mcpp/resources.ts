@@ -1,11 +1,11 @@
 import type { CourseResource } from "../../../types/teaching";
 
-export const dbmsResources: CourseResource[] = [
+export const mcppResources: CourseResource[] = [
 
     {
         id: 1,
         category: "Lecture Notes",
-        title: "Unit 1 - Introduction to Database Systems",
+        title: "Unit 1 - Modern Computing Approaches",
         uploaded: false,
         file: ""
     },
@@ -13,7 +13,7 @@ export const dbmsResources: CourseResource[] = [
     {
         id: 2,
         category: "Presentations",
-        title: "Introduction to Database Systems",
+        title: "Modern Computing and Python Programming",
         uploaded: false,
         file: ""
     },
@@ -28,30 +28,22 @@ export const dbmsResources: CourseResource[] = [
 
     {
         id: 4,
-        category: "SQL Scripts",
-        title: "Practice SQL Queries",
+        category: "Python Scripts",
+        title: "Practice Python Programs",
         uploaded: false,
         file: ""
     },
 
     {
         id: 5,
-        category: "Assignments",
-        title: "Assignment 1",
+        category: "Reference Books",
+        title: "Python Programming using Problem Solving Approach",
         uploaded: false,
         file: ""
     },
 
     {
         id: 6,
-        category: "Reference Books",
-        title: "Database System Concepts",
-        uploaded: false,
-        file: ""
-    },
-
-    {
-        id: 7,
         category: "Previous Question Papers",
         title: "Summer Semester Question Paper",
         uploaded: false,

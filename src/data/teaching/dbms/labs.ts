@@ -1,4 +1,6 @@
-export const dbmsLabs = [
+import type { Lab } from "../../../types/teaching";
+
+export const dbmsLabs: Lab[] = [
 
     {
         id: 1,
@@ -23,7 +25,7 @@ export const dbmsLabs = [
                 file: ""
             },
 
-            sql: {
+            code: {
                 uploaded: false,
                 file: ""
             },
@@ -58,7 +60,7 @@ export const dbmsLabs = [
                 file: ""
             },
 
-            sql: {
+            code: {
                 uploaded: false,
                 file: ""
             },
