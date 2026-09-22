@@ -49,6 +49,8 @@ export interface SyllabusUnit {
 
     hours: number;
 
+    labHours: number;
+
     lectures: number;
 
     outcomes: string[];

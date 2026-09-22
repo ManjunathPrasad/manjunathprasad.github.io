@@ -12,6 +12,8 @@ export const dbmsSyllabus: SyllabusUnit[] = [
 
         hours: 7,
 
+        labHours: 0,
+
         lectures: 4,
 
         topics: [
@@ -39,6 +41,8 @@ export const dbmsSyllabus: SyllabusUnit[] = [
 
         hours: 9,
 
+        labHours: 0,
+
         lectures: 4,
 
         topics: [
@@ -64,6 +68,8 @@ export const dbmsSyllabus: SyllabusUnit[] = [
             "Design Theory and Normalization",
 
         hours: 8,
+
+        labHours: 0,
 
         lectures: 5,
 
@@ -91,6 +97,8 @@ export const dbmsSyllabus: SyllabusUnit[] = [
 
         hours: 9,
 
+        labHours: 0,
+
         lectures: 4,
 
         topics: [
@@ -117,6 +125,8 @@ export const dbmsSyllabus: SyllabusUnit[] = [
             "Transaction management and recovery mechanisms.",
 
         hours: 7,
+
+        labHours: 0,
 
         lectures: 3,
 

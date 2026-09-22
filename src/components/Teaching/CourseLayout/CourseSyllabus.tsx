@@ -1,4 +1,4 @@
-import { BookOpen, Clock3, GraduationCap, Target } from "lucide-react";
+import { BookOpen, Clock3, FlaskConical, GraduationCap, Target } from "lucide-react";
 
 import Accordion, { type AccordionItem } from "../../ui/Accordion";
 import InfoCard from "../../ui/InfoCard";
@@ -23,13 +23,23 @@ export default function CourseSyllabus() {
 
             <div className="space-y-8">
 
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 
                     <InfoCard
                         icon={<Clock3 className="text-blue-600" />}
                         title="Teaching Hours"
                         value={`${unit.hours} Hours`}
                     />
+
+                    {unit.labHours > 0 && (
+
+                        <InfoCard
+                            icon={<FlaskConical className="text-orange-600" />}
+                            title="Lab Hours"
+                            value={`${unit.labHours} Hours`}
+                        />
+
+                    )}
 
                     <InfoCard
                         icon={<BookOpen className="text-green-600" />}

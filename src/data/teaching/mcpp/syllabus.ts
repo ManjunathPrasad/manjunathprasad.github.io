@@ -12,6 +12,8 @@ export const mcppSyllabus: SyllabusUnit[] = [
 
         hours: 8,
 
+        labHours: 0,
+
         lectures: 4,
 
         topics: [
@@ -38,6 +40,8 @@ export const mcppSyllabus: SyllabusUnit[] = [
             "Introduction to Python programming: program structure, variables, data types, operators and I/O statements.",
 
         hours: 8,
+
+        labHours: 6,
 
         lectures: 4,
 
@@ -66,6 +70,8 @@ export const mcppSyllabus: SyllabusUnit[] = [
             "String handling, conditional and looping constructs, and defining and using functions in Python.",
 
         hours: 8,
+
+        labHours: 6,
 
         lectures: 4,
 
@@ -97,6 +103,8 @@ export const mcppSyllabus: SyllabusUnit[] = [
 
         hours: 8,
 
+        labHours: 6,
+
         lectures: 4,
 
         topics: [
@@ -122,6 +130,8 @@ export const mcppSyllabus: SyllabusUnit[] = [
             "Fundamentals of Artificial Intelligence, intelligent agents, and the basics of Machine Learning.",
 
         hours: 8,
+
+        labHours: 6,
 
         lectures: 4,
 
