@@ -7,7 +7,13 @@ import SemesterTimeline from "../components/Teaching/SemesterTimeline";
 import QuickLinks from "../components/Teaching/QuickLinks";
 import TeachingPhilosophy from "../components/Teaching/Portal/TeachingPhilosophy";
 
+import { currentSemesterCourses } from "../data/teaching/currentSemesterCourses";
+
 export default function TeachingPage() {
+
+    const hasActiveCourses = currentSemesterCourses.some(
+        (course) => course.status === "Active"
+    );
 
     return (
 
@@ -17,9 +23,9 @@ export default function TeachingPage() {
 
             <CurrentSemesterCourses />
 
-            <TeachingStats />
+            {hasActiveCourses && <TeachingStats />}
 
-            <SemesterTimeline />
+            {hasActiveCourses && <SemesterTimeline />}
 
             <QuickLinks />
 

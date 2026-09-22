@@ -4,6 +4,14 @@ import SectionHeader from "../Teaching/CourseLayout/SectionHeader";
 
 export default function CurrentSemesterCourses() {
 
+    const activeCourses = currentSemesterCourses.filter(
+        (course) => course.status === "Active"
+    );
+
+    if (activeCourses.length === 0) {
+        return null;
+    }
+
     return (
 
         <section
@@ -26,7 +34,7 @@ export default function CurrentSemesterCourses() {
 
                 <div className="mt-14 grid gap-8 lg:grid-cols-2">
 
-                    {currentSemesterCourses.map((course) => (
+                    {activeCourses.map((course) => (
 
                         <CoursePreviewCard
                             key={course.id}

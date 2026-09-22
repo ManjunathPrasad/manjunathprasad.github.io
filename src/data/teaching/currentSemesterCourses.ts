@@ -18,7 +18,7 @@ export const currentSemesterCourses = [
 
         students: 2,
 
-        status: "Active",
+        status: "Inactive",
 
         color: "blue",
 
