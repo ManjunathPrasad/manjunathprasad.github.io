@@ -7,7 +7,6 @@ import type {
     Lab
 } from "../../types/teaching";
 
-const THEORY_HOURS_PER_CLASS = 2;
 const LAB_HOURS_PER_SESSION = 2;
 
 export function getCompletedTheoryClasses(journal: JournalLecture[]) {
@@ -16,8 +15,11 @@ export function getCompletedTheoryClasses(journal: JournalLecture[]) {
     ).length;
 }
 
-export function getCompletedTheoryHours(journal: JournalLecture[]) {
-    return getCompletedTheoryClasses(journal) * THEORY_HOURS_PER_CLASS;
+export function getCompletedTheoryHours(
+    journal: JournalLecture[],
+    course: CourseInfo
+) {
+    return getCompletedTheoryClasses(journal) * course.hoursPerLecture;
 }
 
 export function getTheoryProgressPercentage(
@@ -26,7 +28,7 @@ export function getTheoryProgressPercentage(
 ) {
 
     return Math.round(
-        (getCompletedTheoryHours(journal) / course.lectureHours) * 100
+        (getCompletedTheoryHours(journal, course) / course.lectureHours) * 100
     );
 
 }

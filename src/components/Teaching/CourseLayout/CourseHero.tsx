@@ -8,6 +8,7 @@ type Props = {
         labHours: number;
         instructor: string;
         startedOn: string;
+        endDate: string;
         currentModule: string;
     };
 };
@@ -68,6 +69,10 @@ export default function CourseHero({ course }: Props) {
 
                             <p>
                                 <strong>Started:</strong> {course.startedOn}
+                            </p>
+
+                            <p>
+                                <strong>Ends:</strong> {course.endDate}
                             </p>
 
                             <p>

@@ -5,7 +5,8 @@ import {
     BookOpen,
     Code2,
     FileQuestion,
-    ClipboardList
+    ClipboardList,
+    Calendar
 } from "lucide-react";
 
 import FileCard from "../../ui/FileCard";
@@ -21,7 +22,8 @@ const iconMap = {
     "Python Scripts": Code2,
     "Assignments": FileQuestion,
     "Reference Books": BookOpen,
-    "Previous Question Papers": Download
+    "Previous Question Papers": Download,
+    "Academic Calendar": Calendar
 };
 
 export default function ResourceLibrary() {
@@ -67,6 +69,12 @@ export default function ResourceLibrary() {
                                 title={resource.title}
                                 subtitle={resource.category}
                                 available={resource.uploaded}
+                                buttonText="Download"
+                                onClick={
+                                    resource.uploaded
+                                        ? () => window.open(resource.file, "_blank", "noopener,noreferrer")
+                                        : undefined
+                                }
                             />
 
                         );

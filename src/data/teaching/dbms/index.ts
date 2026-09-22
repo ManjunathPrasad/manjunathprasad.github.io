@@ -1,6 +1,7 @@
 export { dbmsCourse } from "./course";
 export { dbmsProgress } from "./progress";
 export { dbmsSyllabus } from "./syllabus";
+export { dbmsBlowupSyllabus } from "./blowupSyllabus";
 export { dbmsJournal } from "./journal";
 export { dbmsLabs } from "./labs";
 export { dbmsResources } from "./resources";

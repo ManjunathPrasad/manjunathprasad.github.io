@@ -4,7 +4,7 @@ export const mcppCourse: CourseInfo = {
     code: "26ESCC106",
     title: "Modern Computing and Python Programming",
     semester: "I/II Semester",
-    duration: "Summer Semester 2026",
+    duration: "Semester I 2026-27",
 
     credits: 4,
 
@@ -13,8 +13,11 @@ export const mcppCourse: CourseInfo = {
 
     instructor: "Manjunath Prasad H. R.",
 
-    startedOn: "22 June 2026",
+    startedOn: "16 September 2026",
+    endDate: "22 December 2026",
     currentModule: "Modern Computing Approaches",
+
+    hoursPerLecture: 1,
 
     description:
         "Modern Computing and Python Programming is an introductory course that familiarizes students with modern computing approaches such as parallel, distributed, cluster, grid, cloud and edge computing, followed by the fundamentals of Python programming, problem-solving techniques, file processing and an overview of Artificial Intelligence and Machine Learning.",

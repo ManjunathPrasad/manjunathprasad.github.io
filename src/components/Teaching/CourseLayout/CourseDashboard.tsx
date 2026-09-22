@@ -33,7 +33,7 @@ export default function CourseDashboard() {
         announcements
     } = useCourse();
 
-    const theoryHours = getCompletedTheoryHours(journal);
+    const theoryHours = getCompletedTheoryHours(journal, course);
     const labHours = getCompletedLabHours(labs);
 
     const theoryPercentage = getTheoryProgressPercentage(journal, course);

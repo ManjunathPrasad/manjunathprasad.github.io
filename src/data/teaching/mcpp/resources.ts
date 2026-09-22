@@ -45,9 +45,17 @@ export const mcppResources: CourseResource[] = [
     {
         id: 6,
         category: "Previous Question Papers",
-        title: "Summer Semester Question Paper",
+        title: "Semester I Question Paper",
         uploaded: false,
         file: ""
+    },
+
+    {
+        id: 7,
+        category: "Academic Calendar",
+        title: "Semester I Academic Calendar (2026-27)",
+        uploaded: true,
+        file: "/documents/mcpp-academic-calendar-2026-27.pdf"
     }
 
 ];

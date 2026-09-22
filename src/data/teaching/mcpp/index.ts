@@ -1,6 +1,7 @@
 export { mcppCourse } from "./course";
 export { mcppProgress } from "./progress";
 export { mcppSyllabus } from "./syllabus";
+export { mcppBlowupSyllabus } from "./blowupSyllabus";
 export { mcppJournal } from "./journal";
 export { mcppLabs } from "./labs";
 export { mcppResources } from "./resources";

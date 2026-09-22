@@ -1,10 +1,17 @@
 import { useEffect, useState } from "react";
 
-const navigationItems = [
+import { useCourse } from "../../../context/useCourse";
+
+const baseNavigationItems = [
     { label: "Overview", href: "#overview" },
     { label: "Announcements", href: "#announcements" },
     { label: "Dashboard", href: "#dashboard" },
-    { label: "Syllabus", href: "#syllabus" },
+    { label: "Syllabus", href: "#syllabus" }
+];
+
+const blowupSyllabusItem = { label: "Blow-up Syllabus", href: "#blowup-syllabus" };
+
+const remainingNavigationItems = [
     { label: "Journal", href: "#journal" },
     { label: "Laboratory", href: "#laboratory" },
     { label: "Assignments", href: "#assignments" },
@@ -12,6 +19,14 @@ const navigationItems = [
 ];
 
 export default function CourseNavigation() {
+
+    const { blowupSyllabus } = useCourse();
+
+    const navigationItems = [
+        ...baseNavigationItems,
+        ...(blowupSyllabus.length > 0 ? [blowupSyllabusItem] : []),
+        ...remainingNavigationItems
+    ];
 
     const [activeSection, setActiveSection] = useState("overview");
 
@@ -56,7 +71,7 @@ export default function CourseNavigation() {
 
         return () => observer.disconnect();
 
-    }, []);
+    }, [navigationItems]);
 
     return (
 

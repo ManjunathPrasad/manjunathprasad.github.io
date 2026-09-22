@@ -7,6 +7,7 @@ import CourseNavigation from "../../components/Teaching/CourseLayout/CourseNavig
 import CourseOverview from "../../components/Teaching/CourseLayout/CourseOverview";
 import CourseDashboard from "../../components/Teaching/CourseLayout/CourseDashboard";
 import CourseSyllabus from "../../components/Teaching/CourseLayout/CourseSyllabus";
+import BlowupSyllabus from "../../components/Teaching/CourseLayout/BlowupSyllabus";
 import CourseJournal from "../../components/Teaching/CourseLayout/CourseJournal";
 import LaboratoryStudio from "../../components/Teaching/CourseLayout/LaboratoryStudio";
 import Assignments from "../../components/Teaching/CourseLayout/Assignments";
@@ -83,6 +84,8 @@ function CoursePageContent() {
             <CourseDashboard />
 
             <CourseSyllabus />
+
+            <BlowupSyllabus />
 
             <CourseJournal />
 

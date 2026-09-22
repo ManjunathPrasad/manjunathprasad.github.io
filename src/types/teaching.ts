@@ -16,7 +16,10 @@ export interface CourseInfo {
     instructor: string;
 
     startedOn: string;
+    endDate: string;
     currentModule: string;
+
+    hoursPerLecture: number;
 
     description: string;
 
@@ -161,7 +164,8 @@ export type ResourceCategory =
     | "Python Scripts"
     | "Assignments"
     | "Reference Books"
-    | "Previous Question Papers";
+    | "Previous Question Papers"
+    | "Academic Calendar";
 
 export interface CourseResource {
 
@@ -204,6 +208,28 @@ export interface Announcement {
 
 }
 
+export interface BlowupSyllabusEntry {
+
+    day: number;
+
+    date: string;
+
+    weekday: string;
+
+    unit: string;
+
+    topic: string;
+
+    resource: {
+
+        uploaded: boolean;
+
+        file: string;
+
+    };
+
+}
+
 export interface CourseBundle {
 
     course: CourseInfo;
@@ -211,6 +237,8 @@ export interface CourseBundle {
     progress: CourseProgress;
 
     syllabus: SyllabusUnit[];
+
+    blowupSyllabus: BlowupSyllabusEntry[];
 
     journal: JournalLecture[];
 
